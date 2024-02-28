@@ -32,7 +32,7 @@ font-family: Arial, Helvetica, sans-serif;
 #triangulo {
     width: 0;
     height: 0;
-    border-left: 40px solid transparent;
-    border-right: 40px solid transparent;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
     border-bottom: 80px solid green;
 }
