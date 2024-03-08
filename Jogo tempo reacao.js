@@ -15,6 +15,8 @@ let formaAleatoria = 0;
 
 let num_1a3;
 
+let tempo;
+
     circulo.remove();
     triangulo.remove();
 
@@ -66,7 +68,9 @@ let num_1a3;
                         tela.appendChild(triangulo);
                     }
 
-                }, 1000);
+
+                    tempo = Math.floor(Math.random() * 3) + Math.random();
+                }, tempo * 1000);
                 };
 
 
@@ -128,7 +132,9 @@ let num_1a3;
                         tela.appendChild(triangulo);
                     }
 
-                }, 1000);
+
+                    tempo = Math.floor( Math.random() * 3) + Math.random();
+                }, tempo *1000);
                 };
 
 
@@ -187,5 +193,7 @@ let num_1a3;
                         tela.appendChild(triangulo);
                     }
 
-                }, 1000);
+
+                    tempo = Math.floor( Math.random() * 3) + Math.random();
+                }, tempo * 1000);
                 };
