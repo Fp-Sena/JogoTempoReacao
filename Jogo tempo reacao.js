@@ -2,6 +2,7 @@ var tela = document.getElementById("tela_reacao");
 var quadrado = document.getElementById("quadrado");
 var circulo = document.getElementById("circulo");
 var triangulo = document.getElementById("triangulo");
+var tempoClick = document.getElementById("Time");
 
 var limiteMaximoTop = 75;
 var limiteMinimoTop = 19;
@@ -17,26 +18,22 @@ let num_1a3;
 
 let tempo;
 
-
 let tamanho;
 let tamanhoTrianguloBase;
-let tamanhoTrianguloLaterais
+let tamanhoTrianguloLaterais;
 
-
+let EpochPasada;
 
     circulo.remove();
     triangulo.remove();
 
 
-                
                 quadrado.onclick = function(){
 
-                    tamanho=Math.floor(Math.random() * 200);
-                    tamanhoTrianguloLaterais=Math.floor(Math.random() * 100);   
-                    tamanhoTrianguloBase=tamanhoTrianguloLaterais + tamanhoTrianguloLaterais*30/100;
-
                     quadrado.remove();
-                
+
+                    tempoClick.innerHTML=(Date.now()-EpochPasada)/1000;
+
                 setTimeout ( function(){
 
                     corAleatoria = '#'+Math.floor(Math.random()*16777215).toString(16);
@@ -45,7 +42,10 @@ let tamanhoTrianguloLaterais
                 
                     num_1a3 = Math.floor(Math.random() * 3) + 1;
 
+                    
                    if(num_1a3 == 1){
+
+                        tamanho=Math.floor(Math.random() * (20 - 200 +1)) + 200;
 
                         quadrado.style.position = "absolute";
                         quadrado.style.top = novaPosicaoTop + "%";
@@ -58,9 +58,12 @@ let tamanhoTrianguloLaterais
 
                         tela.appendChild(quadrado);
 
+                        EpochPasada = Date.now();
                     }
 
                     else if(num_1a3 == 2){
+
+                        tamanho=Math.floor(Math.random() * (20 - 200 +1)) + 200;
 
                         circulo.style.position = "absolute";
                         circulo.style.top = novaPosicaoTop + "%";
@@ -72,9 +75,14 @@ let tamanhoTrianguloLaterais
                         circulo.style.height = tamanho+"px";
 
                         tela.appendChild(circulo);
+
+                        EpochPasada = Date.now();
                     }
 
                     else if(num_1a3 == 3){
+
+                        tamanhoTrianguloLaterais=Math.floor(Math.random() * (20 - 100 +1)) + 100;   
+                        tamanhoTrianguloBase=tamanhoTrianguloLaterais + tamanhoTrianguloLaterais*30/100;
 
                         triangulo.style.position = "absolute";
                         triangulo.style.top = novaPosicaoTop + "%";
@@ -87,6 +95,8 @@ let tamanhoTrianguloLaterais
                         triangulo.style.borderBottomColor = corAleatoria;
 
                         tela.appendChild(triangulo);
+
+                        EpochPasada = Date.now();
                     }
 
 
@@ -109,11 +119,9 @@ let tamanhoTrianguloLaterais
 
                 triangulo.onclick = function(){
 
-                    tamanho=Math.floor(Math.random() * 200);
-                    tamanhoTrianguloLaterais=Math.floor(Math.random() * 100);   
-                    tamanhoTrianguloBase=tamanhoTrianguloLaterais + tamanhoTrianguloLaterais*30/100;
-
                     triangulo.remove();
+
+                    tempoClick.innerHTML=(Date.now()-EpochPasada)/1000;
 
                 setTimeout ( function(){
 
@@ -124,6 +132,8 @@ let tamanhoTrianguloLaterais
                     num_1a3 = Math.floor(Math.random() * 3) + 1;
 
                    if(num_1a3 == 1){
+
+                        tamanho=Math.floor(Math.random() * (20 - 200 +1)) + 200;
 
                         quadrado.style.position = "absolute";
                         quadrado.style.top = novaPosicaoTop + "%";
@@ -136,9 +146,12 @@ let tamanhoTrianguloLaterais
 
                         tela.appendChild(quadrado);
 
+                        EpochPasada = Date.now();
                     }
 
                     else if(num_1a3 == 2){
+
+                        tamanho=Math.floor(Math.random() * (20 - 200 +1)) + 200;
 
                         circulo.style.position = "absolute";
                         circulo.style.top = novaPosicaoTop + "%";
@@ -150,9 +163,14 @@ let tamanhoTrianguloLaterais
                         circulo.style.height = tamanho+"px";
 
                         tela.appendChild(circulo);
+
+                        EpochPasada = Date.now();
                     }
 
                     else if(num_1a3 == 3){
+
+                        tamanhoTrianguloLaterais=Math.floor(Math.random() * (20 - 100 +1)) + 100;     
+                        tamanhoTrianguloBase=tamanhoTrianguloLaterais + tamanhoTrianguloLaterais*30/100;
 
                         triangulo.style.position = "absolute";
                         triangulo.style.top = novaPosicaoTop + "%";
@@ -165,6 +183,8 @@ let tamanhoTrianguloLaterais
                         triangulo.style.borderBottomColor = corAleatoria;
 
                         tela.appendChild(triangulo);
+
+                        EpochPasada = Date.now();
                     }
 
 
@@ -184,11 +204,9 @@ let tamanhoTrianguloLaterais
 
                 circulo.onclick = function(){
 
-                    tamanho=Math.floor(Math.random() * 200);
-                    tamanhoTrianguloLaterais=Math.floor(Math.random() * 100);   
-                    tamanhoTrianguloBase=tamanhoTrianguloLaterais + tamanhoTrianguloLaterais*30/100;
-
                     circulo.remove();
+
+                    tempoClick.innerHTML=(Date.now()-EpochPasada)/1000;
 
                 setTimeout ( function(){
 
@@ -199,6 +217,8 @@ let tamanhoTrianguloLaterais
                     num_1a3 = Math.floor(Math.random() * 3) + 1;
 
                    if(num_1a3 == 1){
+
+                        tamanho=Math.floor(Math.random() * (20 - 200 +1)) + 200;
 
                         quadrado.style.position = "absolute";
                         quadrado.style.top = novaPosicaoTop + "%";
@@ -211,9 +231,12 @@ let tamanhoTrianguloLaterais
 
                         tela.appendChild(quadrado);
 
+                        EpochPasada = Date.now();
                     }
 
                     else if(num_1a3 == 2){
+
+                        tamanho=Math.floor(Math.random() * (20 - 200 +1)) + 200;
 
                         circulo.style.position = "absolute";
                         circulo.style.top = novaPosicaoTop + "%";
@@ -225,9 +248,14 @@ let tamanhoTrianguloLaterais
                         circulo.style.height = tamanho+"px";
 
                         tela.appendChild(circulo);
+
+                        EpochPasada = Date.now();
                     }
 
                     else if(num_1a3 == 3){
+
+                        tamanhoTrianguloLaterais=Math.floor(Math.random() * (20 - 100 +1)) + 100;     
+                        tamanhoTrianguloBase=tamanhoTrianguloLaterais + tamanhoTrianguloLaterais*30/100;
 
                         triangulo.style.position = "absolute";
                         triangulo.style.top = novaPosicaoTop + "%";
@@ -240,6 +268,8 @@ let tamanhoTrianguloLaterais
                         triangulo.style.borderBottomColor = corAleatoria;
 
                         tela.appendChild(triangulo);
+
+                        EpochPasada = Date.now();
                     }
 
 
