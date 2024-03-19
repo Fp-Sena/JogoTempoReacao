@@ -30,8 +30,8 @@ let record04=100;
 let record05=100;
 
 let tempo;
-let tempoMax = 2;
-let tempoMin = 2;
+let tempoMax = 4;
+let tempoMin = 4;
 
 let tamanho;
 let tamanhoMax = 200;
