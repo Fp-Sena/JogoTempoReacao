@@ -3,10 +3,16 @@ var quadrado = document.getElementById("quadrado");
 var circulo = document.getElementById("circulo");
 var triangulo = document.getElementById("triangulo");
 var tempoClick = document.getElementById("Time");
+var tempo01 = document.getElementById("tempo01");
+var tempo02 = document.getElementById("tempo02");
+var tempo03 = document.getElementById("tempo03");
+var tempo04 = document.getElementById("tempo04");
+var tempo05 = document.getElementById("tempo05");
 
-var limiteMaximoTop = 75;
+
+var limiteMaximoTop = 69;
 var limiteMinimoTop = 18;
-var limiteMaximoLeft = 86;
+var limiteMaximoLeft = 84;
 var limiteMinimoLeft = 1;
 
 let novaPosicaoTop = 0;
@@ -16,9 +22,16 @@ let formaAleatoria = 0;
 
 let num_1a3;
 
+
+let record01=100;
+let record02=100;
+let record03=100;
+let record04=100;
+let record05=100;
+
 let tempo;
-let tempoMax = 6;
-let tempoMin = 6;
+let tempoMax = 2;
+let tempoMin = 2;
 
 let tamanho;
 let tamanhoMax = 200;
@@ -40,6 +53,56 @@ let contagem = 0;
                     quadrado.remove();
 
                     tempoClick.innerHTML=(Date.now()-EpochPasada)/1000;
+                    
+                    if((Date.now()-EpochPasada)/1000<record01){
+                        tempo01.innerHTML=(Date.now()-EpochPasada)/1000;
+
+                        record05=record04;
+                        tempo05.innerHTML=record05;
+                        record04=record03;
+                        tempo04.innerHTML=record04;
+                        record03=record02;
+                        tempo03.innerHTML=record03;
+                        record02=record01;
+                        tempo02.innerHTML=record02;
+
+                        record01=(Date.now()-EpochPasada)/1000;
+                    }
+                    else if((Date.now()-EpochPasada)/1000<record02){
+                        tempo02.innerHTML=(Date.now()-EpochPasada)/1000;
+
+                        record05=record04;
+                        tempo05.innerHTML=record05;
+                        record04=record03;
+                        tempo04.innerHTML=record04;
+                        record03=record02;
+                        tempo03.innerHTML=record03;
+
+                        record02=(Date.now()-EpochPasada)/1000;
+                    }
+                    else if((Date.now()-EpochPasada)/1000<record03){
+                        tempo03.innerHTML=(Date.now()-EpochPasada)/1000;
+
+                        record05=record04;
+                        tempo05.innerHTML=record05;
+                        record04=record03;
+                        tempo04.innerHTML=record04;
+
+                        record03=(Date.now()-EpochPasada)/1000;
+                    }
+                    else if((Date.now()-EpochPasada)/1000<record04){
+                        tempo04.innerHTML=(Date.now()-EpochPasada)/1000;
+
+                        record05=record04;
+                        tempo05.innerHTML=record05;
+
+                        record04=(Date.now()-EpochPasada)/1000;
+                    }
+                    else if((Date.now()-EpochPasada)/1000<record05){
+                        tempo05.innerHTML=(Date.now()-EpochPasada)/1000;
+
+                        record05=(Date.now()-EpochPasada)/1000;
+                    }
 
                     contagem++;
                 setTimeout ( function(){
@@ -50,7 +113,6 @@ let contagem = 0;
                 
                     num_1a3 = Math.floor(Math.random() * 3) + 1;
 
-                    
                    if(num_1a3 == 1){
 
                         tamanho=Math.floor(Math.random() * (tamanhoMin - tamanhoMax +1)) + tamanhoMax;
@@ -143,11 +205,66 @@ let contagem = 0;
 
 
 
+
+
+
+
+
                 triangulo.onclick = function(){
 
                     triangulo.remove();
 
                     tempoClick.innerHTML=(Date.now()-EpochPasada)/1000;
+
+                    if((Date.now()-EpochPasada)/1000<record01){
+                        tempo01.innerHTML=(Date.now()-EpochPasada)/1000;
+
+                        record05=record04;
+                        tempo05.innerHTML=record05;
+                        record04=record03;
+                        tempo04.innerHTML=record04;
+                        record03=record02;
+                        tempo03.innerHTML=record03;
+                        record02=record01;
+                        tempo02.innerHTML=record02;
+
+                        record01=(Date.now()-EpochPasada)/1000;
+                    }
+                    else if((Date.now()-EpochPasada)/1000<record02){
+                        tempo02.innerHTML=(Date.now()-EpochPasada)/1000;
+
+                        record05=record04;
+                        tempo05.innerHTML=record05;
+                        record04=record03;
+                        tempo04.innerHTML=record04;
+                        record03=record02;
+                        tempo03.innerHTML=record03;
+
+                        record02=(Date.now()-EpochPasada)/1000;
+                    }
+                    else if((Date.now()-EpochPasada)/1000<record03){
+                        tempo03.innerHTML=(Date.now()-EpochPasada)/1000;
+
+                        record05=record04;
+                        tempo05.innerHTML=record05;
+                        record04=record03;
+                        tempo04.innerHTML=record04;
+
+                        record03=(Date.now()-EpochPasada)/1000;
+                    }
+                    else if((Date.now()-EpochPasada)/1000<record04){
+                        tempo04.innerHTML=(Date.now()-EpochPasada)/1000;
+
+                        record05=record04;
+                        tempo05.innerHTML=record05;
+
+                        record04=(Date.now()-EpochPasada)/1000;
+                    }
+                    else if((Date.now()-EpochPasada)/1000<record05){
+                        tempo05.innerHTML=(Date.now()-EpochPasada)/1000;
+
+                        record05=(Date.now()-EpochPasada)/1000;
+                    }
 
                     contagem++;
                 setTimeout ( function(){
@@ -251,6 +368,56 @@ let contagem = 0;
                     circulo.remove();
 
                     tempoClick.innerHTML=(Date.now()-EpochPasada)/1000;
+
+                    if((Date.now()-EpochPasada)/1000<record01){
+                        tempo01.innerHTML=(Date.now()-EpochPasada)/1000;
+
+                        record05=record04;
+                        tempo05.innerHTML=record05;
+                        record04=record03;
+                        tempo04.innerHTML=record04;
+                        record03=record02;
+                        tempo03.innerHTML=record03;
+                        record02=record01;
+                        tempo02.innerHTML=record02;
+
+                        record01=(Date.now()-EpochPasada)/1000;
+                    }
+                    else if((Date.now()-EpochPasada)/1000<record02){
+                        tempo02.innerHTML=(Date.now()-EpochPasada)/1000;
+
+                        record05=record04;
+                        tempo05.innerHTML=record05;
+                        record04=record03;
+                        tempo04.innerHTML=record04;
+                        record03=record02;
+                        tempo03.innerHTML=record03;
+
+                        record02=(Date.now()-EpochPasada)/1000;
+                    }
+                    else if((Date.now()-EpochPasada)/1000<record03){
+                        tempo03.innerHTML=(Date.now()-EpochPasada)/1000;
+
+                        record05=record04;
+                        tempo05.innerHTML=record05;
+                        record04=record03;
+                        tempo04.innerHTML=record04;
+
+                        record03=(Date.now()-EpochPasada)/1000;
+                    }
+                    else if((Date.now()-EpochPasada)/1000<record04){
+                        tempo04.innerHTML=(Date.now()-EpochPasada)/1000;
+
+                        record05=record04;
+                        tempo05.innerHTML=record05;
+
+                        record04=(Date.now()-EpochPasada)/1000;
+                    }
+                    else if((Date.now()-EpochPasada)/1000<record05){
+                        tempo05.innerHTML=(Date.now()-EpochPasada)/1000;
+
+                        record05=(Date.now()-EpochPasada)/1000;
+                    }
 
                     contagem++;
                 setTimeout ( function(){
