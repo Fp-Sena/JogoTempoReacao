@@ -1,7 +1,4 @@
 let tela = document.getElementById("tela_reacao");
-let quadrado = document.getElementById("quadrado");
-let circulo = document.getElementById("circulo");
-let triangulo = document.getElementById("triangulo");
 let tempoClick = document.getElementById("Time");
 let tempo01 = document.getElementById("tempo01");
 let tempo02 = document.getElementById("tempo02");
@@ -19,7 +16,7 @@ let novaPosicaoLeft = 0;
 let corAleatoria = 0;
 let formaAleatoria = 0;
 
-let num_1a3;
+let num_0a2;
 
 let record01=100;
 let record02=100;
@@ -42,6 +39,7 @@ let EpochPasada;
 
 let contagem = 0;
 
+let formas = [quadrado, circulo, triangulo];
 
 function aoClicarNaForma() {
                         
@@ -53,60 +51,32 @@ function aoClicarNaForma() {
         novaPosicaoTop = Math.floor(Math.random() * (limiteMinimoTop - limiteMaximoTop +1)) + limiteMaximoTop;
         novaPosicaoLeft = Math.floor(Math.random() * (limiteMinimoLeft - limiteMaximoLeft +1)) + limiteMaximoLeft;
 
-        num_1a3 = Math.floor(Math.random() * 3) + 1;
+        formas[num_0a2].style.position = "absolute";
+        formas[num_0a2].style.top = novaPosicaoTop + "%";
+        formas[num_0a2].style.left = novaPosicaoLeft + "%";
 
-        if(num_1a3 == 1){
+        num_0a2 = Math.floor(Math.random() * 2);
+        formas[num_0a2];
 
-            tamanho=Math.floor(Math.random() * (tamanhoMin - tamanhoMax +1)) + tamanhoMax;
-
-            quadrado.style.position = "absolute";
-            quadrado.style.top = novaPosicaoTop + "%";
-            quadrado.style.left = novaPosicaoLeft + "%";
-
-            quadrado.style.backgroundColor = corAleatoria;
-
-            quadrado.style.width = tamanho+"px";
-            quadrado.style.height = tamanho+"px";
-
-            tela.appendChild(quadrado);
-
-        }
-
-        else if(num_1a3 == 2){
+        if(num_0a2 == 0 || num_0a2 == 1){
 
             tamanho=Math.floor(Math.random() * (tamanhoMin - tamanhoMax +1)) + tamanhoMax;
 
-            circulo.style.position = "absolute";
-            circulo.style.top = novaPosicaoTop + "%";
-            circulo.style.left = novaPosicaoLeft +"%";
-
-            circulo.style.backgroundColor = corAleatoria;
-
-            circulo.style.width = tamanho+"px";
-            circulo.style.height = tamanho+"px";
-
-            tela.appendChild(circulo);
-
+            formas[num_0a2].style.backgroundColor = corAleatoria;
+            formas[num_0a2].style.width = tamanho+"px";
+            formas[num_0a2].style.height = tamanho+"px";
         }
-
-        else if(num_1a3 == 3){
+        else if(num_0a2 == 2){
 
             tamanhoTrianguloLaterais=Math.floor(Math.random() * (tamanhoMin - tamanhoMaxTriangulo +1)) + tamanhoMaxTriangulo;   
             tamanhoTrianguloBase=tamanhoTrianguloLaterais + tamanhoTrianguloLaterais*30/100;
 
-            triangulo.style.position = "absolute";
-            triangulo.style.top = novaPosicaoTop + "%";
-            triangulo.style.left = novaPosicaoLeft +"%";
-
-            triangulo.style.borderLeft = tamanhoTrianguloLaterais+"px solid transparent";
-            triangulo.style.borderRight = tamanhoTrianguloLaterais+"px solid transparent";
-            triangulo.style.borderBottom = tamanhoTrianguloBase+"px solid green";
-
-            triangulo.style.borderBottomColor = corAleatoria;
-
-            tela.appendChild(triangulo);
-
+            formas[num_0a2].style.borderLeft = tamanhoTrianguloLaterais+"px solid transparent";
+            formas[num_0a2].style.borderRight = tamanhoTrianguloLaterais+"px solid transparent";
+            formas[num_0a2].style.borderBottom = tamanhoTrianguloBase+"px solid green";
+            formas[num_0a2].style.borderBottomColor = corAleatoria;
         }
+        tela.appendChild(formas[num_0a2]);
         EpochPasada = Date.now();
 
         dificuldadeDoJogo();
@@ -117,7 +87,7 @@ function aoClicarNaForma() {
 
 function gravandoRecords() {
     tempoClick.innerHTML=(Date.now()-EpochPasada)/1000;
-
+//--------------------------------------------------------------------------------------------------------vvv
     if((Date.now()-EpochPasada)/1000<record01){
         tempo01.innerHTML=(Date.now()-EpochPasada)/1000;
 
@@ -167,6 +137,7 @@ function gravandoRecords() {
 
         record05=(Date.now()-EpochPasada)/1000;
     }
+//------------------------------------------------------------------------------------------------------^^^
     contagem++;
 }
 
