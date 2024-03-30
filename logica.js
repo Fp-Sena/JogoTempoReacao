@@ -51,12 +51,11 @@ function aoClicarNaForma() {
         novaPosicaoTop = Math.floor(Math.random() * (limiteMinimoTop - limiteMaximoTop +1)) + limiteMaximoTop;
         novaPosicaoLeft = Math.floor(Math.random() * (limiteMinimoLeft - limiteMaximoLeft +1)) + limiteMaximoLeft;
 
+        num_0a2 = Math.floor(Math.random() * 3);
+
         formas[num_0a2].style.position = "absolute";
         formas[num_0a2].style.top = novaPosicaoTop + "%";
         formas[num_0a2].style.left = novaPosicaoLeft + "%";
-
-        num_0a2 = Math.floor(Math.random() * 2);
-        formas[num_0a2];
 
         if(num_0a2 == 0 || num_0a2 == 1){
 
