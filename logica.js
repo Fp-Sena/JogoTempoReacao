@@ -86,7 +86,7 @@ function aoClicarNaForma() {
 
 function gravandoRecords() {
     tempoClick.innerHTML=(Date.now()-EpochPasada)/1000;
-//--------------------------------------------------------------------------------------------------------vvv
+
     if((Date.now()-EpochPasada)/1000<record01){
         tempo01.innerHTML=(Date.now()-EpochPasada)/1000;
 
@@ -136,7 +136,7 @@ function gravandoRecords() {
 
         record05=(Date.now()-EpochPasada)/1000;
     }
-//------------------------------------------------------------------------------------------------------^^^
+    
     contagem++;
 }
 
