@@ -8,7 +8,7 @@ let tempo05 = document.getElementById("tempo05");
 
 let limiteMaximoTop = 69;
 let limiteMinimoTop = 18;
-let limiteMaximoLeft = 84;
+let limiteMaximoLeft = 78;
 let limiteMinimoLeft = 1;
 
 let novaPosicaoTop = 0;
@@ -31,7 +31,8 @@ let tempoMin = 4;
 let tamanho;
 let tamanhoMax = 200;
 let tamanhoMin = 200;
-let tamanhoMaxTriangulo = 100;
+let tamanhoMaxTriangulo = 150;
+let tamanhoMinTriangulo = 150;
 let tamanhoTrianguloBase;
 let tamanhoTrianguloLaterais;
 
@@ -67,12 +68,12 @@ function aoClicarNaForma() {
         }
         else if(num_0a2 == 2){
 
-            tamanhoTrianguloLaterais=Math.floor(Math.random() * (tamanhoMin - tamanhoMaxTriangulo +1)) + tamanhoMaxTriangulo;   
+            tamanhoTrianguloLaterais=Math.floor(Math.random() * (tamanhoMinTriangulo - tamanhoMaxTriangulo +1)) + tamanhoMaxTriangulo;   
             tamanhoTrianguloBase=tamanhoTrianguloLaterais + tamanhoTrianguloLaterais*30/100;
 
             formas[num_0a2].style.borderLeft = tamanhoTrianguloLaterais+"px solid transparent";
             formas[num_0a2].style.borderRight = tamanhoTrianguloLaterais+"px solid transparent";
-            formas[num_0a2].style.borderBottom = tamanhoTrianguloBase+"px solid green";
+            formas[num_0a2].style.borderBottom = tamanhoTrianguloBase+"px solid";
             formas[num_0a2].style.borderBottomColor = corAleatoria;
         }
         tela.appendChild(formas[num_0a2]);
@@ -152,6 +153,7 @@ function dificuldadeDoJogo() {
 
         if(tamanhoMin!=20){
             tamanhoMin=tamanhoMin-36;
+            tamanhoMinTriangulo=tamanhoMinTriangulo-25;
         }
         else if(tamanhoMax!=56){
             tamanhoMax=tamanhoMax-36;
