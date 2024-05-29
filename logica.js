@@ -6,10 +6,10 @@ let tempo03 = document.getElementById("tempo03");
 let tempo04 = document.getElementById("tempo04");
 let tempo05 = document.getElementById("tempo05");
 
-let limiteMaximoTop = 69;
-let limiteMinimoTop = 18;
-let limiteMaximoLeft = 78;
-let limiteMinimoLeft = 1;
+let limiteMaximoTop = 71;
+let limiteMinimoTop = 22;
+let limiteMaximoLeft = 72;
+let limiteMinimoLeft = 5;
 
 let novaPosicaoTop = 0;
 let novaPosicaoLeft = 0;
